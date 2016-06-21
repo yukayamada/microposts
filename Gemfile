@@ -50,3 +50,11 @@ group :development do
 end
 
 gem 'kaminari'
+
+gem "twitter-bootstrap-rails"
+gem "less-rails"
+gem "therubyracer"
+
+gem 'carrierwave'
+
+gem 'streamio-ffmpeg'

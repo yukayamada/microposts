@@ -1,7 +1,10 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+    <%= f.text_area :content, placeholder: "Compose new dancelog..." %>
+  <%= f.label :video %><br>
+  <%= f.file_field :video, :accept => 'video/*' %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
