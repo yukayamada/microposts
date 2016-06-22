@@ -7,8 +7,8 @@
     <strong>Video:</strong>
   </p>
   <p>
-    <%= link_to @article.video_url.to_s do %>
-      <%= image_tag(@article.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
+    <%= link_to @micropost.video_url.to_s do %>
+      <%= video_tag(@micropost.video_url(:screenshot).to_s, id: "video", :alt => "screenshot") %>
     <% end %>
   </p>
   <span class="timestamp">

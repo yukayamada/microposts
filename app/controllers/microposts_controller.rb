@@ -21,19 +21,20 @@ class MicropostsController < ApplicationController
   end
   
   def update
-  respond_to do |format|
-    if @article.update(article_params) && @article.video.recreate_versions!
-      format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+    respond_to do |format|
+    if @micropost.update(micropost_params) && @micropost.video.recreate_versions!
+      format.html { redirect_to @micropost, notice: 'Dancelog was successfully updated.' }
       format.json { head :no_content }
     else
       format.html { render action: 'edit' }
-      format.json { render json: @article.errors, status: :unprocessable_entity }
+      format.json { render json: @micropost.errors, status: :unprocessable_entity }
     end
   end
+end
   
   private
   
   def micropost_params
-    params.require(:micropost).permit(:content, :genre_id)
+    params.require(:micropost).permit(:content, :genre_id, :video)
   end
 end

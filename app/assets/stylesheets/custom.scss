@@ -4,10 +4,14 @@
 /* universal */
 
 .navbar {
-  background-color: #BB0000;
+  background-color: #00CC99;
 }
 
 .nav > .li {
+  color: white;
+}
+
+.nav > .li > a {
   color: black;
 }
 
